@@ -1,36 +1,16 @@
-# 📌 Programa en JavaScript: Ordenar 3 números
-
-Este programa permite al usuario ingresar **tres números enteros**, y luego:
-
-1. Verifica si los tres números son **iguales**.  
-2. Los muestra ordenados de **mayor a menor**.  
-3. Los muestra ordenados de **menor a mayor**.  
-
----
-
-## 🚀 Cómo funciona
-
-- El programa solicita tres números con `prompt()`.  
-- Luego verifica si todos son iguales usando una condición `if`.  
-- Para ordenarlos, se puede usar dos enfoques:  
-  1. **Principiante:** Comparaciones con `if` (paso a paso).  
-  2. **Avanzado:** Usar un arreglo y el método `.sort()`.  
-
----
-
-## 📜 Código (versión con condicionales)
-
-```javascript
+// Pedir los números
 let valor1 = parseInt(prompt("Ingresa el primer número:"));
 let valor2 = parseInt(prompt("Ingresa el segundo número:"));
 let valor3 = parseInt(prompt("Ingresa el tercer número:"));
 
+// Verificar si son iguales
 if (valor1 === valor2 && valor2 === valor3) {
     alert("Los números son iguales");
 } else {
     alert("Los números NO son iguales");
 }
 
+// Ordenar manualmente (sin usar sort)
 let mayor, medio, menor;
 
 if (valor1 >= valor2 && valor1 >= valor3) {
@@ -62,21 +42,6 @@ if (valor1 >= valor2 && valor1 >= valor3) {
     }
 }
 
+// Mostrar resultados
 alert("Orden de mayor a menor: " + mayor + ", " + medio + ", " + menor);
 alert("Orden de menor a mayor: " + menor + ", " + medio + ", " + mayor);
-
-Ejemplo de ejecución
-
-Ingresa el primer número: 8
-Ingresa el segundo número: 3
-Ingresa el tercer número: 5
-
-➡ Los números NO son iguales
-➡ Orden de mayor a menor: 8, 5, 3
-➡ Orden de menor a mayor: 3, 5, 8
-Tecnologías usadas
-
-JavaScript
-
-Ejecutado en un navegador (usa prompt() y alert()).
-
